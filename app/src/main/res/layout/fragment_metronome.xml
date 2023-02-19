@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MetronomeFragment">
+
+    <fragment
+        android:id="@+id/twinkle_frag"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:name="com.hfad.guitarassistant.components.TwinkleFragment"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spin_pre"
+            android:textSize="18sp"/>
+        <Spinner
+            android:id="@+id/twinkle_spin"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:entries="@array/spin_options"
+            android:gravity="center_horizontal"
+            android:popupBackground="#AAB4CDCD"
+            android:dropDownWidth="50dp"
+            android:background="@drawable/spinner_drop_down_bg"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spin_suf"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/twinkle_speed"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/speed_default"
+            android:textSize="65sp"
+            android:textStyle="italic"
+            android:gravity="bottom|center_horizontal"
+            android:layout_gravity="bottom"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/speed_suf"
+            android:textSize="21sp"
+            android:layout_marginStart="-23dp"
+            android:gravity="start|end"
+            android:layout_gravity="bottom"
+            android:textColor="@color/black"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+        <Button
+            android:id="@+id/add"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:textSize="25sp"
+            android:theme="@style/CustomButton"
+            android:text="-"
+             />
+        <Button
+            android:id="@+id/minus"
+            android:layout_marginStart="70dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:theme="@style/CustomButton"
+            android:textSize="25sp"
+            android:text="+" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/customSeekBar"
+        android:layout_marginTop="30dp"
+        android:paddingEnd="30dp"
+        android:paddingStart="30dp"
+        android:progress="33" />
+
+
+    <ImageView
+        android:id="@+id/control_button_metronome"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal|top"
+        android:src="@drawable/start"
+        android:contentDescription="@string/desc_start" />
+
+
+</LinearLayout>

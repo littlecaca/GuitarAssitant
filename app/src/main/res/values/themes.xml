@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.吉他助手" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/bottom</item>
+<!--        <item name="android:navigationMode">@color/black</item>-->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+    
+    <style name="customSeekBar" parent="Widget.AppCompat.SeekBar">
+        <item name="android:maxHeight">6dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@color/colorAccent</item>
+        <item name="android:progressDrawable">@drawable/seekbar_bg</item>
+        <item name="android:minHeight">6dp</item>
+        <item name="android:thumb">@drawable/seekbar_bg_thumb</item>
+    </style>
+
+    <style name="CustomButton" parent="Widget.AppCompat.Button">
+        <item name="colorButtonNormal">#E0EEEE</item>
+    </style>
+</resources>
